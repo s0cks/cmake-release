@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/s0cks/cmake-release",
   "engines": {
-    "node": ">=20.5.0"
+    "node": ">=20.17.0"
   },
   "keywords": [
     "cmake",
@@ -28,5 +28,8 @@
   "license": "MIT",
   "devDependencies": {
     "semantic-release": "^24.1.1"
+  },
+  "dependencies": {
+    "@semantic-release/error": "^4.0.0"
   }
 }
