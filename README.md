@@ -62,6 +62,19 @@ Finally, create a build.json:
 }
 ```
 
+### build.json Schema Validation
+
+You can validate your build.json schema against: [build.schema.json](/build.schema.json)
+
+Example:
+
+```js
+{
+  "$schema": "build.schema.json",
+  ...
+}
+```
+
 ## Build & Install
 
 ### Prerequisites
