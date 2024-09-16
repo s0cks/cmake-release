@@ -19,6 +19,6 @@ repos:
       - id: check-github-workflows
       - id: check-metaschema
         name: "Validate .releaserc"
-        entry: "echo "
-        types: [json]
         files: ^\.releaserc$
+        types_or: [file]
+        pass_filenames: true
