@@ -1,0 +1,10 @@
+{
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@s0cks/cmake-release"
+  ]
+}

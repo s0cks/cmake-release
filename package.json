@@ -1,0 +1,32 @@
+{
+  "name": "@s0cks/cmake-release",
+  "version": "1.0.0",
+  "description": "Release cmake projects using semantic-release",
+  "type": "module",
+  "files": [
+    "index.js",
+    "lib/"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s0cks/cmake-release.git"
+  },
+  "homepage": "https://github.com/s0cks/cmake-release",
+  "engines": {
+    "node": ">=20.5.0"
+  },
+  "keywords": [
+    "cmake",
+    "cpp",
+    "c",
+    "release",
+    "version",
+    "semantic-release"
+  ],
+  "author": "@s0cks",
+  "license": "MIT",
+  "devDependencies": {
+    "semantic-release": "^24.1.1"
+  }
+}
