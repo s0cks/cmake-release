@@ -1,5 +1,5 @@
-import SemanticReleaseError from '@semantic-release/error';
-import fs from 'fs';
+import { publishCMakeRelease } from './lib/publish.js';
+import { verifyCMakeRelease } from './lib/verify.js';
 
 let verified = false;
 
@@ -9,40 +9,23 @@ export async function verifyConditions(config, context) {
     options: {},
     logger,
   } = context;
-  const listfile = `${cwd}/CMakeLists.txt`;
-  if(!fs.existsSync(listfile))
-    throw new SemanticReleaseError(`cannot find root CMakeLists.txt`);
+  if(!verified)
+    await verifyCMakeRelease(logger, cwd);
   verified = true;
 }
 
 export async function publish(config, context) {
   const {
+    cwd,
     options: {},
+    nextRelease: {
+      version,
+    },
     logger,
   } = context;
-  logger.log(`publish`);
-}
-
-export async function success(config, context) {
-  const {
-    options: {},
-    logger,
-    releases,
-  } = context;
-  logger.log(`success, releases:`);
-  for(let release in releases) {
-    logger.log(`- ${release}`);
+  if(!verified) {
+    await verifyCMakeRelease(logger, cwd);
+    verified = true;
   }
-}
-
-export async function fail(config, context) {
-  const {
-    options: {},
-    logger,
-    errors,
-  } = context;
-  logger.log(`failed, errors:`);
-  for(let error in errors) {
-    logger.log(`- ${error}`);
-  }
+  await publishCMakeRelease(logger, cwd, version);
 }
