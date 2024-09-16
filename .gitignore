@@ -1,5 +1,6 @@
 build.json
 CMakeLists.txt
+.env
 
 # nodejs & npm stuff
 node_modules/
