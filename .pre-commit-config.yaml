@@ -17,8 +17,10 @@ repos:
     hooks:
       - id: check-github-actions
       - id: check-github-workflows
-      - id: check-metaschema
+      - id: check-jsonschema
         name: "Validate .releaserc"
         files: ^\.releaserc$
         types_or: [file]
         pass_filenames: true
+        args:
+          ["--schemafile", "https://json.schemastore.org/semantic-release.json"]
