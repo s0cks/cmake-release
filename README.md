@@ -6,6 +6,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Usage](#usage)
+  - [build.json Schema Validation](#buildjson-schema-validation)
 - [Build & Install](#build--install)
   - [Prerequisites](#prerequisites)
   - [Install Locally](#install-locally)
