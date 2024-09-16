@@ -19,7 +19,7 @@
 
 Add the following to your .releaserc
 
-```json
+```js
 {
   ...
   "plugins": [
@@ -33,8 +33,8 @@ Add the following to your .releaserc
 
 ### Prerequisites
 
-* node & npm
-* cmake
+- node & npm
+- cmake
 
 ### Install Locally
 
