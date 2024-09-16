@@ -59,7 +59,7 @@ Finally, create a build.json:
 {
   "name": "my-project",
   "version": "1.0.0",
-  "homepage": "https://github.com/me/my-project
+  "homepage": "https://github.com/me/my-project"
 }
 ```
 
@@ -67,7 +67,7 @@ Finally, create a build.json:
 
 You can validate your build.json schema against: [build.schema.json](/build.schema.json)
 
-Example:
+Ex:
 
 ```js
 {
