@@ -17,7 +17,7 @@
 
 ## Usage
 
-Add the following to your .releaserc
+Add the following to your .releaserc:
 
 ```js
 {
@@ -27,6 +27,29 @@ Add the following to your .releaserc
     "@s0cks/cmake-release"
   ]
 }
+```
+
+Download [BuildInfo.cmake](/cmake/BuildInfo.cmake) and place it in your CMake scripts directory:
+
+Ex:
+
+```bash
+cd /path/to/project
+# create scripts directory if it doesn't exist
+mkdir cmake/
+# download BuildInfo.cmake
+wget 
+```
+
+Add the following to your CMakeLists.txt:
+
+```cmake
+include(BuildInfo)
+project(
+  ${BUILD_JSON_NAME}
+  VERSION ${BUILD_JSON_VERSION}
+  HOMEPAGE_URL ${BUILD_JSON_HOMEPAGE}
+  LANGUAGES C CXX)
 ```
 
 ## Build & Install
