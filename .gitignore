@@ -3,6 +3,7 @@ CMakeLists.txt
 
 # nodejs & npm stuff
 node_modules/
+dist/
 
 # ignore osx DS_Store
 .DS_Store
