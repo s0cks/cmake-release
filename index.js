@@ -1,5 +1,5 @@
-import { publishCMakeRelease } from './publish';
-import { verifyCMakeRelease } from './verify';
+import { publishCMakeRelease } from './lib/publish.js';
+import { verifyCMakeRelease } from './lib/verify.js';
 
 let verified = false;
 
