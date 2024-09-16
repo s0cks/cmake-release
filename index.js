@@ -1,4 +1,4 @@
-import { publishCMakeRelease } from './lib/publish.js';
+import { prepareCMakeRelease } from './lib/prepare.js';
 import { verifyCMakeRelease } from './lib/verify.js';
 
 let verified = false;
@@ -14,7 +14,7 @@ export async function verifyConditions(config, context) {
   verified = true;
 }
 
-export async function publish(config, context) {
+export async function prepare(config, context) {
   const {
     cwd,
     options: {},
@@ -23,9 +23,9 @@ export async function publish(config, context) {
     },
     logger,
   } = context;
-  if(!verified) {
+   if(!verified) {
     await verifyCMakeRelease(logger, cwd);
     verified = true;
   }
-  await publishCMakeRelease(logger, cwd, version);
+  await prepareCMakeRelease(logger, cwd, version);
 }

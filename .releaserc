@@ -5,6 +5,17 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@s0cks/cmake-release"
+    "@semantic-release/npm",
+    "@s0cks/cmake-release",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "package.json"
+        ]
+      }
+    ]
   ]
 }
