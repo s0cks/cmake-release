@@ -5,6 +5,8 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@s0cks/cmake-release"
+    "@semantic-release/git",
+    "@semantic-release/npm",
+    "@semantic-release/github"
   ]
 }
