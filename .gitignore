@@ -1,4 +1,5 @@
 build.json
+CMakeLists.txt
 
 # nodejs & npm stuff
 node_modules/
