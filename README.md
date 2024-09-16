@@ -33,12 +33,12 @@ Download [BuildInfo.cmake](/cmake/BuildInfo.cmake) and place it in your CMake sc
 
 Ex:
 
-```bash
+```sh
 cd /path/to/project
 # create scripts directory if it doesn't exist
 mkdir cmake/
 # download BuildInfo.cmake
-wget 
+wget https://raw.githubusercontent.com/s0cks/cmake-release/main/cmake/BuildInfo.cmake
 ```
 
 Add the following to your CMakeLists.txt:
@@ -50,6 +50,16 @@ project(
   VERSION ${BUILD_JSON_VERSION}
   HOMEPAGE_URL ${BUILD_JSON_HOMEPAGE}
   LANGUAGES C CXX)
+```
+
+Finally, create a build.json:
+
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "homepage": "https://github.com/me/my-project
+}
 ```
 
 ## Build & Install
